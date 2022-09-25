@@ -9,7 +9,7 @@ const SendMessage = () => {
     let { id } = useParams();
     let history = useHistory();
     // let URL = 'http://localhost:5001/api/';
-    let URL = 'https://kisan-contacts.herokuapp.com/'
+    let URL = 'https://kisan-contacts.herokuapp.com/api'
 
     const fetchData = async () => {
 

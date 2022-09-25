@@ -5,7 +5,7 @@ const Message = () => {
 
     const [messages, setMessages] = React.useState([]);
     // let URL = 'http://localhost:5001/api/';
-    let URL = 'https://kisan-contacts.herokuapp.com/'
+    let URL = 'https://kisan-contacts.herokuapp.com/api'
 
     const fetchMessages = () => {
 
