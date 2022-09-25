@@ -10,7 +10,7 @@ const Profile = () => {
 
     const [data, setData] = React.useState({});
     // let URL = 'http://localhost:5001/api/';
-    let URL = 'https://kisan-contacts.herokuapp.com/api'
+    let URL = 'https://kisan-contacts.herokuapp.com/api/'
 
     const fetchData = async () => {
 
