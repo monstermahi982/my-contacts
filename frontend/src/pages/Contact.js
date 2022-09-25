@@ -6,7 +6,8 @@ const Contact = () => {
 
     const [contacts, setContacts] = React.useState([]);
     const history = useHistory();
-    let URL = 'http://localhost:5001/api/';
+    // let URL = 'http://localhost:5001/api/';
+    let URL = 'https://kisan-contacts.herokuapp.com/'
 
     const fetchContacts = async () => {
         const data = await axios.get( URL + 'contacts');

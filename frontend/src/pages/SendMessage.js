@@ -8,7 +8,8 @@ const SendMessage = () => {
     const [message, setMessage] = React.useState('');
     let { id } = useParams();
     let history = useHistory();
-    let URL = 'http://localhost:5001/api/';
+    // let URL = 'http://localhost:5001/api/';
+    let URL = 'https://kisan-contacts.herokuapp.com/'
 
     const fetchData = async () => {
 

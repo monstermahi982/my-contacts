@@ -15,7 +15,7 @@ db.once('open', () => {
 
 const app = express()
 
-app.use(cors({ origin: ['http://localhost:3000', 'https://e-vitaran.herokuapp.com/', 'http://localhost:5001'] }))
+app.use(cors({ origin: ['http://localhost:3000', 'https://e-vitaran.herokuapp.com/', 'http://localhost:5001', 'https://kisan-contacts.herokuapp.com/'] }))
 app.use(express.json())
 app.use('/api', routes);
 app.use(errorhandler);

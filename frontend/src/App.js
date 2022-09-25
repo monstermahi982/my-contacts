@@ -24,7 +24,8 @@ function App() {
   const [gender, setGender] = React.useState('');
   const [email, setEmail] = React.useState('');
 
-  let URL = 'http://localhost:5001/api/';
+  // let URL = 'http://localhost:5001/api/';
+  let URL = 'https://kisan-contacts.herokuapp.com/'
 
   let history = useHistory();
 
