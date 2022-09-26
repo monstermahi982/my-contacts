@@ -46,7 +46,8 @@ function App() {
 
     await axios.post( URL + 'contact', data).then((res) => {
       console.log(res.data);
-    });
+      history.push('/contacts')
+    }).catch(e => { history.push('/contacts'); console.log(e, " error") });
 
   }
 
