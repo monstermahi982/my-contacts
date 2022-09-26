@@ -23,7 +23,7 @@ const SendMessage = () => {
 
         await axios.post( URL + 'message', { message: message, contact: id }).then((res) => {
             history.push('/messages');
-        })
+        }).catch(e => { console.log(e, " error"); history.push('/messages');});
 
 
 
