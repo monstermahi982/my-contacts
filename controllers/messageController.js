@@ -1,6 +1,8 @@
 import CustomErrorhandler from '../services/CustomErrorHandler';
-import { Message } from '../models'
+import { Message, Contact } from '../models'
 import Joi from 'joi'
+import { PORT, DB_URL, TEXT_LOCAL } from '../config'
+import axios from 'axios'
 
 const messageController = {
     async getMessage(req, res, next) {
@@ -54,6 +56,34 @@ const messageController = {
             message,
             contact
         })
+
+        let contactData = await Contact.findOne({ _id: contact });
+        
+        var url = `https://api.textlocal.in/send/?apikey=${TEXT_LOCAL}&numbers=${contactData.phone ? contactData.phone : 9370963976 }&sender=TXTLCL&message='+ ${encodeURIComponent(message) }`;
+
+        // Make a request for a user with a given ID
+        // sending sms of message
+        try {
+            axios.post(url)
+            .then(function (response) {
+
+                console.log("------ SMS Gateway Response ------");
+
+                console.log(response.data);
+
+            })
+            .catch(function (error) {
+
+                console.log(error, " monster");
+
+            })
+
+            .finally(function () {
+
+            });
+        } catch (error) {
+            return next(error);
+        }   
 
         let id;
 
